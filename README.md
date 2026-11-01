@@ -1,5 +1,7 @@
 # YggSkins
 
+![Build](https://github.com/CubicLauncherDevs/YggSkins/actions/workflows/build.yml/badge.svg)
+
 Plugin de skins para Paper 1.21.x y 26.x con soporte para servidores Yggdrasil (authlib-injector),
 skins personalizadas por URL mediante MineSkin y persistencia en SQLite, MySQL/MariaDB o PostgreSQL.
 
