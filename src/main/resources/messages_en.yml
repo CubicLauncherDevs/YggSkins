@@ -1,0 +1,90 @@
+prefix: "<gray>[<gold>YggSkins</gold>]</gray> "
+
+general:
+  no-permission: "<prefix><red>You do not have permission to do that."
+  player-only: "<prefix><red>This command can only be used by a player."
+  unknown-command: "<prefix><red>Unknown subcommand. Use <yellow>/skin help</yellow>."
+  cooldown: "<prefix><red>Wait <yellow>%seconds%</yellow> seconds before changing your skin again."
+  error: "<prefix><red>An error occurred: <gray>%reason%</gray>"
+  reload: "<prefix><green>Configuration and messages reloaded."
+  disabled: "<prefix><red>The Yggdrasil provider is not available."
+
+skin:
+  applied: "<prefix><green>Skin <yellow>%skin%</yellow> applied (%variant%)."
+  applied-unsigned: "<prefix><yellow>Skin <yellow>%skin%</yellow> applied unsigned; other clients may not see it."
+  cleared: "<prefix><green>Your original skin has been restored."
+  cleared-no-original: "<prefix><yellow>Your original skin could not be found; the current skin was removed."
+  not-found: "<prefix><red>No skin found for <yellow>%name%</yellow>."
+  invalid-name: "<prefix><red>Invalid player name."
+  invalid-variant: "<prefix><red>Invalid variant. Use <yellow>classic</yellow> or <yellow>slim</yellow>."
+  unsigned-rejected: "<prefix><red>The skin of <yellow>%name%</yellow> is unsigned and the server requires signatures."
+  signature-invalid: "<prefix><red>The signature of the skin of <yellow>%name%</yellow> is not valid."
+  provider-unavailable: "<prefix><red>No skin provider is available."
+  cooldown: "<prefix><red>Wait <yellow>%seconds%</yellow> seconds before changing your skin again."
+  update-no-skin: "<prefix><yellow>You have no saved skin to refresh."
+  update-done: "<prefix><green>Skin refreshed from <yellow>%source%</yellow>."
+  url:
+    invalid: "<prefix><red>Invalid URL: <gray>%url%</gray>"
+    blocked: "<prefix><red>That URL is not allowed."
+    creating: "<prefix><gray>Generating skin from URL, please wait..."
+    applied: "<prefix><green>Skin applied from <gray>%url%</gray>."
+    failed: "<prefix><red>Could not generate the skin: <gray>%reason%</gray>"
+  info:
+    header: "<prefix><gold>Your skin information"
+    source: "<prefix><gray>Source: <white>%source%"
+    variant: "<prefix><gray>Variant: <white>%variant%"
+    url: "<prefix><gray>Texture: <white>%url%"
+    signed: "<prefix><gray>Signed: <white>%signed%"
+    none: "<prefix><yellow>You have no skin applied by YggSkins."
+
+admin:
+  help:
+    header: "<prefix><gold>Administration commands"
+    reload: "<prefix><yellow>/yggskins reload</yellow> <gray>- Reload the configuration."
+    status: "<prefix><yellow>/yggskins status</yellow> <gray>- Show plugin status."
+    info: "<prefix><yellow>/yggskins info <player></yellow> <gray>- Show the saved skin."
+    applyskin: "<prefix><yellow>/yggskins applyskin <player></yellow> <gray>- Re-apply their skin."
+    drop: "<prefix><yellow>/yggskins drop <player></yellow> <gray>- Remove their saved skin."
+    createcustom: "<prefix><yellow>/yggskins createcustom <name> <url|player:name> [variant]</yellow>"
+    setcustomname: "<prefix><yellow>/yggskins setcustomname <name> <text></yellow>"
+    purge: "<prefix><yellow>/yggskins purgeolddata <days></yellow> <gray>- Delete old data."
+  status:
+    header: "<prefix><gold>YggSkins status"
+    storage: "<prefix><gray>Storage: <white>%type%"
+    yggdrasil: "<prefix><gray>Yggdrasil: <white>%status%"
+    detected: "<prefix><gray>API Root: <white>%url%"
+    skins: "<prefix><gray>Skins in database: <white>%count%"
+    players: "<prefix><gray>Registered players: <white>%count%"
+    providers: "<prefix><gray>Providers: <white>%list%"
+  info:
+    header: "<prefix><gold>Skin of %player%"
+    skin: "<prefix><gray>Skin: <white>%skin%"
+    source: "<prefix><gray>Source: <white>%source%"
+    variant: "<prefix><gray>Variant: <white>%variant%"
+    url: "<prefix><gray>Texture: <white>%url%"
+    signed: "<prefix><gray>Signed: <white>%signed%"
+    none: "<prefix><yellow>%player% has no saved skin."
+  applyskin:
+    done: "<prefix><green>Skin re-applied to <yellow>%player%</yellow>."
+    offline: "<prefix><red>%player% is not online."
+  drop:
+    done: "<prefix><green>Skin removed from <yellow>%player%</yellow>."
+    offline: "<prefix><yellow>%player% is not online; only the record was deleted."
+  createcustom:
+    done: "<prefix><green>Custom skin <yellow>%name%</yellow> created."
+    exists: "<prefix><red>A custom skin named <yellow>%name%</yellow> already exists."
+    failed: "<prefix><red>Could not create the custom skin: <gray>%reason%</gray>"
+    setname: "<prefix><green>Display name of <yellow>%name%</yellow> updated."
+    not-found: "<prefix><red>Custom skin <yellow>%name%</yellow> does not exist."
+  purge:
+    done: "<prefix><green>Removed <yellow>%count%</yellow> old records."
+    invalid: "<prefix><red>You must specify a number of days greater than zero."
+
+help:
+  header: "<prefix><gold>YggSkins commands"
+  set: "<prefix><yellow>/skin set <name> [classic|slim]</yellow> <gray>- Apply a player's skin."
+  clear: "<prefix><yellow>/skin clear</yellow> <gray>- Restore your original skin."
+  update: "<prefix><yellow>/skin update</yellow> <gray>- Refresh your current skin."
+  url: "<prefix><yellow>/skin url <url> [classic|slim]</yellow> <gray>- Apply a skin from a URL."
+  info: "<prefix><yellow>/skin info</yellow> <gray>- Show your skin information."
+  admin: "<prefix><gray>Administration: <yellow>/yggskins help</yellow>"

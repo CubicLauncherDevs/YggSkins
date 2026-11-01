@@ -1,0 +1,64 @@
+name: YggSkins
+version: '${version}'
+main: dev.yggskins.YggSkinsPlugin
+api-version: '1.21'
+authors: [ YggSkins ]
+description: Gestor de skins con soporte para Yggdrasil y authlib-injector.
+website: https://github.com/yggskins
+softdepend: [ PlaceholderAPI ]
+load: POSTWORLD
+
+commands:
+  yggskins:
+    description: Comandos de administración de YggSkins.
+    usage: /yggskins help
+    aliases: [ ys ]
+
+permissions:
+  yggskins.command:
+    description: Acceso a los comandos básicos de /skin.
+    default: true
+  yggskins.command.set:
+    description: Permite aplicar una skin por nombre.
+    default: true
+  yggskins.command.clear:
+    description: Permite restaurar la skin original.
+    default: true
+  yggskins.command.update:
+    description: Permite refrescar la skin actual.
+    default: true
+  yggskins.command.url:
+    description: Permite aplicar una skin desde una URL.
+    default: op
+  yggskins.admin:
+    description: Acceso a los comandos de administración.
+    default: op
+    children:
+      yggskins.admin.reload: true
+      yggskins.admin.status: true
+      yggskins.admin.info: true
+      yggskins.admin.applyskin: true
+      yggskins.admin.drop: true
+      yggskins.admin.createcustom: true
+      yggskins.admin.purge: true
+  yggskins.admin.reload:
+    description: Recarga la configuración.
+    default: op
+  yggskins.admin.status:
+    description: Muestra el estado del plugin.
+    default: op
+  yggskins.admin.info:
+    description: Muestra información de skins de un jugador.
+    default: op
+  yggskins.admin.applyskin:
+    description: Reaplica la skin guardada de un jugador.
+    default: op
+  yggskins.admin.drop:
+    description: Elimina la skin guardada de un jugador.
+    default: op
+  yggskins.admin.createcustom:
+    description: Crea y edita skins personalizadas.
+    default: op
+  yggskins.admin.purge:
+    description: Purga datos antiguos.
+    default: op

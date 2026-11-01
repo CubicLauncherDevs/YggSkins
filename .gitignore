@@ -1,0 +1,32 @@
+# Compilación
+build/
+out/
+bin/
+*.class
+
+# Gradle
+.gradle/
+.kotlin/
+
+# Servidor local de pruebas (JAR de Paper, mundos, logs y base de datos)
+run/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.fleet/
+.settings/
+.project
+.classpath
+nbproject/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs y temporales
+*.log
+*.tmp

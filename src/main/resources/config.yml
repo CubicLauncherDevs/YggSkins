@@ -1,0 +1,67 @@
+# YggSkins - configuracion principal
+locale: es
+
+# Prefijo usado en todos los mensajes (formato MiniMessage).
+prefix: "<gray>[<gold>YggSkins</gold>]</gray> "
+
+yggdrasil:
+  enabled: true
+  # Vacio = autodetectar desde -javaagent:...authlib-injector.jar=<url>
+  api-root: ""
+  # Rechaza skins del servidor de autenticacion que no vengan firmadas.
+  require-signature: true
+  # Verifica criptograficamente la firma con la clave publica del servidor.
+  verify-signature: true
+  timeout-seconds: 10
+  cache-seconds: 300
+
+providers:
+  # Orden de busqueda para /skin set <nombre>
+  order: [ yggdrasil, custom, mojang ]
+  mojang:
+    enabled: false
+  mineskin:
+    enabled: true
+    api-key: ""
+    visibility: public
+    # Si MineSkin no devuelve una skin firmada, se aplica sin firma.
+    allow-unsigned-fallback: true
+    # Lista blanca de dominios. Vacia = permitir cualquiera (salvo IPs privadas).
+    allowed-domains: []
+    # Re-firma con MineSkin las skins del servidor de autenticacion para que se vean
+    # tambien en clientes sin authlib-injector.
+    resign-yggdrasil: false
+    timeout-seconds: 30
+
+storage:
+  type: sqlite         # sqlite | mysql | postgresql
+  sqlite:
+    file: yggskins.db
+  mysql:
+    host: localhost
+    port: 3306
+    database: yggskins
+    username: root
+    password: ""
+  postgresql:
+    host: localhost
+    port: 5432
+    database: yggskins
+    username: postgres
+    password: ""
+
+skins:
+  # Vuelve a consultar el proveedor original al entrar.
+  refresh-on-join: false
+  apply-delay-ticks: 1
+  cooldown-seconds: 30
+  # Skin aplicada cuando el jugador no tiene ninguna guardada. Vacio = ninguna.
+  default-skin: ""
+
+commands:
+  register-skin-command: true
+  register-skins-alias: true
+
+metrics:
+  enabled: false
+  plugin-id: 0

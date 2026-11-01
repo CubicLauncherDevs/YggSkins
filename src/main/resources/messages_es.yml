@@ -1,0 +1,90 @@
+prefix: "<gray>[<gold>YggSkins</gold>]</gray> "
+
+general:
+  no-permission: "<prefix><red>No tienes permiso para hacer eso."
+  player-only: "<prefix><red>Este comando solo puede usarlo un jugador."
+  unknown-command: "<prefix><red>Subcomando desconocido. Usa <yellow>/skin help</yellow>."
+  cooldown: "<prefix><red>Espera <yellow>%seconds%</yellow> segundos antes de volver a cambiar de skin."
+  error: "<prefix><red>Ha ocurrido un error: <gray>%reason%</gray>"
+  reload: "<prefix><green>Configuracion y mensajes recargados."
+  disabled: "<prefix><red>El proveedor Yggdrasil no esta disponible."
+
+skin:
+  applied: "<prefix><green>Skin <yellow>%skin%</yellow> aplicada (%variant%)."
+  applied-unsigned: "<prefix><yellow>Skin <yellow>%skin%</yellow> aplicada sin firma; puede que otros clientes no la vean."
+  cleared: "<prefix><green>Se ha restaurado tu skin original."
+  cleared-no-original: "<prefix><yellow>No se encontro tu skin original; se ha eliminado la skin actual."
+  not-found: "<prefix><red>No se encontro ninguna skin para <yellow>%name%</yellow>."
+  invalid-name: "<prefix><red>Nombre de jugador no valido."
+  invalid-variant: "<prefix><red>Variante no valida. Usa <yellow>classic</yellow> o <yellow>slim</yellow>."
+  unsigned-rejected: "<prefix><red>La skin de <yellow>%name%</yellow> no esta firmada y el servidor exige firma."
+  signature-invalid: "<prefix><red>La firma de la skin de <yellow>%name%</yellow> no es valida."
+  provider-unavailable: "<prefix><red>Ningun proveedor de skins esta disponible."
+  cooldown: "<prefix><red>Espera <yellow>%seconds%</yellow> segundos antes de volver a cambiar de skin."
+  update-no-skin: "<prefix><yellow>No tienes ninguna skin guardada que refrescar."
+  update-done: "<prefix><green>Skin actualizada desde <yellow>%source%</yellow>."
+  url:
+    invalid: "<prefix><red>La URL no es valida: <gray>%url%</gray>"
+    blocked: "<prefix><red>Esa URL no esta permitida."
+    creating: "<prefix><gray>Generando skin desde la URL, espera un momento..."
+    applied: "<prefix><green>Skin aplicada desde <gray>%url%</gray>."
+    failed: "<prefix><red>No se pudo generar la skin: <gray>%reason%</gray>"
+  info:
+    header: "<prefix><gold>Informacion de tu skin"
+    source: "<prefix><gray>Origen: <white>%source%"
+    variant: "<prefix><gray>Variante: <white>%variant%"
+    url: "<prefix><gray>Textura: <white>%url%"
+    signed: "<prefix><gray>Firmada: <white>%signed%"
+    none: "<prefix><yellow>No tienes ninguna skin aplicada por YggSkins."
+
+admin:
+  help:
+    header: "<prefix><gold>Comandos de administracion"
+    reload: "<prefix><yellow>/yggskins reload</yellow> <gray>- Recarga la configuracion."
+    status: "<prefix><yellow>/yggskins status</yellow> <gray>- Muestra el estado del plugin."
+    info: "<prefix><yellow>/yggskins info <jugador></yellow> <gray>- Muestra la skin guardada."
+    applyskin: "<prefix><yellow>/yggskins applyskin <jugador></yellow> <gray>- Reaplica su skin."
+    drop: "<prefix><yellow>/yggskins drop <jugador></yellow> <gray>- Elimina su skin guardada."
+    createcustom: "<prefix><yellow>/yggskins createcustom <nombre> <url|player:nombre> [variant]</yellow>"
+    setcustomname: "<prefix><yellow>/yggskins setcustomname <nombre> <texto></yellow>"
+    purge: "<prefix><yellow>/yggskins purgeolddata <dias></yellow> <gray>- Borra datos antiguos."
+  status:
+    header: "<prefix><gold>Estado de YggSkins"
+    storage: "<prefix><gray>Almacenamiento: <white>%type%"
+    yggdrasil: "<prefix><gray>Yggdrasil: <white>%status%"
+    detected: "<prefix><gray>API Root: <white>%url%"
+    skins: "<prefix><gray>Skins en base de datos: <white>%count%"
+    players: "<prefix><gray>Jugadores registrados: <white>%count%"
+    providers: "<prefix><gray>Proveedores: <white>%list%"
+  info:
+    header: "<prefix><gold>Skin de %player%"
+    skin: "<prefix><gray>Skin: <white>%skin%"
+    source: "<prefix><gray>Origen: <white>%source%"
+    variant: "<prefix><gray>Variante: <white>%variant%"
+    url: "<prefix><gray>Textura: <white>%url%"
+    signed: "<prefix><gray>Firmada: <white>%signed%"
+    none: "<prefix><yellow>%player% no tiene ninguna skin guardada."
+  applyskin:
+    done: "<prefix><green>Skin reaplicada a <yellow>%player%</yellow>."
+    offline: "<prefix><red>%player% no esta conectado."
+  drop:
+    done: "<prefix><green>Skin eliminada de <yellow>%player%</yellow>."
+    offline: "<prefix><yellow>%player% no esta conectado; solo se borro el registro."
+  createcustom:
+    done: "<prefix><green>Skin personalizada <yellow>%name%</yellow> creada."
+    exists: "<prefix><red>Ya existe una skin personalizada llamada <yellow>%name%</yellow>."
+    failed: "<prefix><red>No se pudo crear la skin personalizada: <gray>%reason%</gray>"
+    setname: "<prefix><green>Nombre visible de <yellow>%name%</yellow> actualizado."
+    not-found: "<prefix><red>No existe la skin personalizada <yellow>%name%</yellow>."
+  purge:
+    done: "<prefix><green>Se eliminaron <yellow>%count%</yellow> registros antiguos."
+    invalid: "<prefix><red>Debes indicar un numero de dias mayor que cero."
+
+help:
+  header: "<prefix><gold>Comandos de YggSkins"
+  set: "<prefix><yellow>/skin set <nombre> [classic|slim]</yellow> <gray>- Aplica la skin de un jugador."
+  clear: "<prefix><yellow>/skin clear</yellow> <gray>- Restaura tu skin original."
+  update: "<prefix><yellow>/skin update</yellow> <gray>- Refresca tu skin actual."
+  url: "<prefix><yellow>/skin url <url> [classic|slim]</yellow> <gray>- Aplica una skin desde una URL."
+  info: "<prefix><yellow>/skin info</yellow> <gray>- Muestra informacion de tu skin."
+  admin: "<prefix><gray>Administracion: <yellow>/yggskins help</yellow>"
